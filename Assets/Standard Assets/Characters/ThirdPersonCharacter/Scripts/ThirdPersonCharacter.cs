@@ -169,7 +169,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (jump && !crouch && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
 			{
 				// jump!
-				m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
+				m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x*2f, m_JumpPower, m_Rigidbody.velocity.z*2f);
 				m_IsGrounded = false;
 				m_Animator.applyRootMotion = false;
 				m_GroundCheckDistance = 0.1f;
@@ -190,7 +190,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// this allows us to modify the positional speed before it's applied.
 			if (m_IsGrounded && Time.deltaTime > 0)
 			{
-				Vector3 v = (m_Animator.deltaPosition * m_MoveSpeedMultiplier) / Time.deltaTime;
+
+                // movw forward with motionz//
+                Vector3 moveForward = transform.forward * m_Animator.GetFloat("motionZ") * Time.deltaTime;
+				Vector3 v = ((m_Animator.deltaPosition + moveForward) * m_MoveSpeedMultiplier) / Time.deltaTime;
 
 				// we preserve the existing y part of the current velocity.
 				v.y = m_Rigidbody.velocity.y;
@@ -210,9 +213,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// it is also good to note that the transform position in the sample assets is at the base of the character
 			if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
 			{
-				m_GroundNormal = hitInfo.normal;
-				m_IsGrounded = true;
-				m_Animator.applyRootMotion = true;
+                if (!hitInfo.collider.isTrigger)
+                {
+                    m_GroundNormal = hitInfo.normal;
+                    m_IsGrounded = true;
+                    m_Animator.applyRootMotion = true;
+                }
 			}
 			else
 			{
@@ -222,4 +228,5 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 	}
+    
 }
