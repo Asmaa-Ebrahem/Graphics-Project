@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+using UnityEngine.UI;
+
 [RequireComponent(typeof(AudioSource))]
 public class respawn : MonoBehaviour {
     public static int levelN = 0;
@@ -9,11 +12,18 @@ public class respawn : MonoBehaviour {
     private Quaternion startRot;
 	public AudioClip impact;
 	AudioSource audioSource;
+
+	public Text winningText;	
+
+
 	// Use this for initialization
 	void Start () {
         startPos = transform.position;
         startRot = transform.rotation;
 		audioSource = GetComponent<AudioSource>();
+//		winningText.text = "";
+
+
 	}
     
     void nextlevel()
@@ -63,6 +73,8 @@ public class respawn : MonoBehaviour {
 			//audioSource.PlayOneShot(impact, 0.7F);
 			GetComponent<Animator>().Play("WIN00", -1, 0f);
 			Invoke("nextlevel", 2f);
+
+			winningText.text = "YOU WIN!";
 		}
 	}
     void Update()
