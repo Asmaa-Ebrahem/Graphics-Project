@@ -54,7 +54,33 @@
      <Compile Include="Assets\assetsfolder\FightingUnityChan_FreeAsset\FightingUnityChan_FreeAsset\Scripts\CameraController.cs" />
      <Compile Include="Assets\assetsfolder\FightingUnityChan_FreeAsset\FightingUnityChan_FreeAsset\Scripts\IdleChanger.cs" />
      <Compile Include="Assets\assetsfolder\GrassRoadRace\Script\CameraMove.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\AIState.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Controllers\RootMotionController.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Controllers\RootMotionController1.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Controllers\VehicleController.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\EnvironmentUpdater.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\FramesPerSecond.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\MousePointer.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Network\AISync.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Network\ContactDamage.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Network\EnemyCannonController.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Network\EnemySpawner.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Network\EntityInfo.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Network\EnvironmentAdapter.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Network\PhysicsController2D.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Network\PlayerController.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\ObjectCounter.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\ObjectSpawner.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\PerceiverConnector.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\SpriteRotation.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\Teleporter.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\TimerDestroy.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\TriggerArriveTarget.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\TriggerDisable.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\TriggerStateTransisation.cs" />
+     <Compile Include="Assets\assetsfolder\Polarith\AI\Examples\Scripts\VehiclePhysics.cs" />
      <Compile Include="Assets\assetsfolder\SkythianCat\Glowing_Forest\Scripts\WaterGroup.cs" />
+     <Compile Include="Assets\assetsfolder\Spider Green\Prefab\spider.cs" />
      <Compile Include="Assets\Foods\Scripts\Food.cs" />
      <Compile Include="Assets\Mountain Terrain\Misc\CameraDefault.cs" />
      <Compile Include="Assets\scripts_ch\MainMenu.cs" />
@@ -100,6 +126,7 @@
      <Compile Include="Assets\theScripts\ScoreScript.cs" />
      <Compile Include="Assets\theScripts\Scripts\keyScrip.cs" />
      <Compile Include="Assets\theScripts\sun.cs" />
+     <Compile Include="Assets\theScripts\Timer.cs" />
      <Compile Include="Assets\WinText.cs" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -146,6 +173,7 @@
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
      <None Include="Assets\Mountain Terrain\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+     <None Include="Assets\assetsfolder\Polarith\AI\Plugins\Polarith.AI.xml" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
      <None Include="Assets\Mountain Terrain\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
@@ -252,6 +280,12 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/Asmaa Ibrahim/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Polarith.AI">
+ <HintPath>C:/Users/Asmaa Ibrahim/Documents/GitHub/Graphics-Project/Assets/assetsfolder/Polarith/AI/Plugins/Polarith.AI.dll</HintPath>
+ </Reference>
+ <Reference Include="Polarith.AI.Editor">
+ <HintPath>C:/Users/Asmaa Ibrahim/Documents/GitHub/Graphics-Project/Assets/assetsfolder/Polarith/AI/Plugins/Editor/Polarith.AI.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -6,14 +6,20 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 public class respawn : MonoBehaviour {
-    public static int levelN = 1;
+    int levelN = 1;
     private Vector3 startPos;
     private Quaternion startRot;
 	public AudioClip impact;
 	AudioSource audioSource;
     private GameObject triggerNpc;
     private bool triggering;
-    public GameObject TheNPC;
+   // public GameObject TheNPC;
+	public AudioClip impact1;
+	AudioSource audioSource1;
+	public AudioClip impact2;
+	AudioSource audioSource2;
+	public AudioClip impactsabar;
+	AudioSource audioSourcesabar;
 
     public Text winningText;	
 
@@ -23,16 +29,19 @@ public class respawn : MonoBehaviour {
         startPos = transform.position;
         startRot = transform.rotation;
 		audioSource = GetComponent<AudioSource>();
+		audioSource1 = GetComponent<AudioSource>();
+		audioSource2 = GetComponent<AudioSource>();
+		audioSourcesabar=GetComponent<AudioSource>();
 //		winningText.text = "";
 
 
 	}
     
-    void nextlevel()
+	 void nextlevel()
     {
         levelN++;
 
-        if (levelN > 3)
+		if (levelN > 3)
         {
             levelN = 1;
         }
@@ -43,7 +52,7 @@ public class respawn : MonoBehaviour {
     // check collision with trigger//
     void OnTriggerEnter(Collider col)
     {
-		if (col.tag == "death")
+		if (col.tag == "death"||col.tag=="car")
         {
             transform.position = startPos;
             transform.rotation = startRot;
@@ -71,6 +80,7 @@ public class respawn : MonoBehaviour {
 			Destroy(col.gameObject);
 			//audioSource.PlayOneShot(impact, 0.7F);
 			GetComponent<Animator>().Play("WIN00", -1, 0f);
+			audioSource1.PlayOneShot(impact1, 0.7F);
 			Invoke("nextlevel", 2f);
 		    winningText.text = "YOU WIN!";
 		}
@@ -78,9 +88,18 @@ public class respawn : MonoBehaviour {
         {
             triggering = true;
             triggerNpc = col.gameObject;
+			ScoreScript.ScoreValue-=5;
+			audioSource2.PlayOneShot(impact2, 0.7F);
             Destroy(col.gameObject, 3f);
 
         }
+		else if (col.tag == "Cactus")
+		{
+			//Destroy(col.gameObject);
+			audioSourcesabar.PlayOneShot(impactsabar, 0.7F);
+			ScoreScript.ScoreValue-=5;
+		}
+
     }
     private void OnTriggerExit(Collider col)
     {
@@ -93,6 +112,10 @@ public class respawn : MonoBehaviour {
     }
     void Update()
     {
+		/*if (Timer.Finished==true) {
+			GetComponent<Animator>().Play("WIN00", -1, 0f);
+			Invoke("nextlevel", 2f);
+		}*/
 		if (ScoreScript.ScoreValue < 5) {
 			transform.position = startPos;
 			transform.rotation = startRot;

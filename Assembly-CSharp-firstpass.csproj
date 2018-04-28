@@ -225,6 +225,12 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/Asmaa Ibrahim/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
+ <Reference Include="Polarith.AI">
+ <HintPath>C:/Users/Asmaa Ibrahim/Documents/GitHub/Graphics-Project/Assets/assetsfolder/Polarith/AI/Plugins/Polarith.AI.dll</HintPath>
+ </Reference>
+ <Reference Include="Polarith.AI.Editor">
+ <HintPath>C:/Users/Asmaa Ibrahim/Documents/GitHub/Graphics-Project/Assets/assetsfolder/Polarith/AI/Plugins/Editor/Polarith.AI.Editor.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

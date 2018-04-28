@@ -6,6 +6,12 @@ TagManager:
   tags:
   - unhealthy
   - healthy
+  - goal
+  - Cactus
+  - enemy
+  - checkpoint
+  - death
+  - car
   layers:
   - Default
   - TransparentFX
