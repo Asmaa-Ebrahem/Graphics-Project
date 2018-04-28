@@ -51,17 +51,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FightingUnityChan_FreeAsset\FightingUnityChan_FreeAsset\Scripts\CameraController.cs" />
-     <Compile Include="Assets\FightingUnityChan_FreeAsset\FightingUnityChan_FreeAsset\Scripts\IdleChanger.cs" />
+     <Compile Include="Assets\assetsfolder\FightingUnityChan_FreeAsset\FightingUnityChan_FreeAsset\Scripts\CameraController.cs" />
+     <Compile Include="Assets\assetsfolder\FightingUnityChan_FreeAsset\FightingUnityChan_FreeAsset\Scripts\IdleChanger.cs" />
+     <Compile Include="Assets\assetsfolder\GrassRoadRace\Script\CameraMove.cs" />
+     <Compile Include="Assets\assetsfolder\SkythianCat\Glowing_Forest\Scripts\WaterGroup.cs" />
      <Compile Include="Assets\Foods\Scripts\Food.cs" />
-     <Compile Include="Assets\GrassRoadRace\Script\CameraMove.cs" />
-     <Compile Include="Assets\Models\Scripts\keyScrip.cs" />
      <Compile Include="Assets\Mountain Terrain\Misc\CameraDefault.cs" />
      <Compile Include="Assets\scripts_ch\MainMenu.cs" />
      <Compile Include="Assets\scripts_ch\OptionsMenu.cs" />
      <Compile Include="Assets\scripts_ch\pauseMenu.cs" />
      <Compile Include="Assets\scripts_ch\respawn.cs" />
-     <Compile Include="Assets\SkythianCat\Glowing_Forest\Scripts\WaterGroup.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -98,6 +97,8 @@
      <Compile Include="Assets\theScripts\enemyCar.cs" />
      <Compile Include="Assets\theScripts\maincam.cs" />
      <Compile Include="Assets\theScripts\pathfollower.cs" />
+     <Compile Include="Assets\theScripts\ScoreScript.cs" />
+     <Compile Include="Assets\theScripts\Scripts\keyScrip.cs" />
      <Compile Include="Assets\theScripts\sun.cs" />
      <Compile Include="Assets\WinText.cs" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
@@ -111,12 +112,12 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Mountain Terrain\UnityChan\Stage\Shader\AlphaMask.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\A_piece_of_nature\Readme.txt" />
+     <None Include="Assets\assetsfolder\A_piece_of_nature\Readme.txt" />
      <None Include="Assets\Mountain Terrain\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
-     <None Include="Assets\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Unlit.shader" />
+     <None Include="Assets\assetsfolder\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Unlit.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Basic.shader" />
+     <None Include="Assets\assetsfolder\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Basic.shader" />
      <None Include="Assets\Mountain Terrain\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\UnityChan\license.txt" />
@@ -129,7 +130,7 @@
      <None Include="Assets\Mountain Terrain\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
-     <None Include="Assets\Models\Key\readME keys.txt" />
+     <None Include="Assets\prefabs\Key\readME keys.txt" />
      <None Include="Assets\prefabs\Simple city plain\Read_me.txt" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
@@ -141,7 +142,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\UnityChan\Stage\Shader\AlphaMask.shader" />
-     <None Include="Assets\Stonewall\readme.txt" />
+     <None Include="Assets\assetsfolder\Stonewall\readme.txt" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
      <None Include="Assets\Mountain Terrain\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />

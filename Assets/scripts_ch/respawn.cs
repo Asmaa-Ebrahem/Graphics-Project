@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 public class respawn : MonoBehaviour {
-    public static int levelN = 0;
+    public static int levelN = 1;
     private Vector3 startPos;
     private Quaternion startRot;
 	public AudioClip impact;
 	AudioSource audioSource;
+    private GameObject triggerNpc;
+    private bool triggering;
+    public GameObject TheNPC;
 
-	public Text winningText;	
+    public Text winningText;	
 
 
 	// Use this for initialization
@@ -30,9 +32,9 @@ public class respawn : MonoBehaviour {
     {
         levelN++;
 
-        if (levelN > 2)
+        if (levelN > 3)
         {
-            levelN = 0;
+            levelN = 1;
         }
        // Application.LoadLevel(levelN);
         SceneManager.LoadScene(levelN);
@@ -41,7 +43,7 @@ public class respawn : MonoBehaviour {
     // check collision with trigger//
     void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "death")
+		if (col.tag == "death")
         {
             transform.position = startPos;
             transform.rotation = startRot;
@@ -49,16 +51,12 @@ public class respawn : MonoBehaviour {
             GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
             GetComponent<Rigidbody>().angularVelocity = new Vector3(0f, 0f, 0f);
         }
-        else if (col.tag == "checkpoint")
-        {
-            startPos = col.transform.position;
-            startRot = col.transform.rotation;
-            Destroy(col.gameObject);
-        }
+       
 		else if (col.tag == "healthy")
         {
             Destroy(col.gameObject);
 			audioSource.PlayOneShot(impact, 0.7F);
+			ScoreScript.ScoreValue += 5;
             //GetComponent<Animator>().Play("WIN00", -1, 0f);
             //Invoke("nextlevel", 2f);
         }
@@ -66,6 +64,7 @@ public class respawn : MonoBehaviour {
 		{
 			Destroy(col.gameObject);
 			audioSource.PlayOneShot(impact, 0.7F);
+			ScoreScript.ScoreValue-=5;
         }
 		else if (col.tag == "goal")
 		{
@@ -73,13 +72,46 @@ public class respawn : MonoBehaviour {
 			//audioSource.PlayOneShot(impact, 0.7F);
 			GetComponent<Animator>().Play("WIN00", -1, 0f);
 			Invoke("nextlevel", 2f);
-
-			winningText.text = "YOU WIN!";
+		    winningText.text = "YOU WIN!";
 		}
-	}
+        if (col.tag == "enemy")
+        {
+            triggering = true;
+            triggerNpc = col.gameObject;
+            Destroy(col.gameObject, 3f);
+
+        }
+    }
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.tag == "enemy")
+        {
+            triggering = false;
+            triggerNpc = col.gameObject;
+
+        }
+    }
     void Update()
     {
-        
+		if (ScoreScript.ScoreValue < 5) {
+			transform.position = startPos;
+			transform.rotation = startRot;
+			GetComponent<Animator>().Play("LOSE00", -1, 0f);
+			GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
+			GetComponent<Rigidbody>().angularVelocity = new Vector3(0f, 0f, 0f);
+		}
+        if (triggering)
+        {
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                // col.g.GetComponent<Animation>().Play("Death");
+                triggering = true;
+                //Destroy(col.gameObject);
+                //Destroy(enemy.gameObject, 3f);
+                //StartCoroutine(ActivationRoutine());
+            }
+
+        }
         if (Input.GetKeyDown("x"))
         {
             GetComponent<Animator>().Play("back_kick", -1, 0f);
