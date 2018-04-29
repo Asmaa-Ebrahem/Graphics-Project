@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 60251a3768f367845be3f39f09974383, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_Sun: {fileID: 1336579302}
+  m_IndirectSpecularColor: {r: 0.4545557, g: 0.5434722, b: 0.66179115, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -11079,6 +11079,26 @@ Prefab:
       propertyPath: impactsabar
       value: 
       objectReference: {fileID: 8300000, guid: 4ef6adfbe0daf7842b3c6508f0c62ce1, type: 3}
+    - target: {fileID: 20031900677967326, guid: fd63de8056732c847bb202e735bc492f,
+        type: 2}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20031900677967326, guid: fd63de8056732c847bb202e735bc492f,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0.9206315
+      objectReference: {fileID: 0}
+    - target: {fileID: 20031900677967326, guid: fd63de8056732c847bb202e735bc492f,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0.9485294
+      objectReference: {fileID: 0}
+    - target: {fileID: 20031900677967326, guid: fd63de8056732c847bb202e735bc492f,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0.93991387
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd63de8056732c847bb202e735bc492f, type: 2}
   m_IsPrefabParent: 0
@@ -12421,8 +12441,8 @@ Camera:
   m_GameObject: {fileID: 511182081}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.021410055, g: 0.021649083, b: 0.022058845, a: 0.019607844}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.9206315, g: 0.9485294, b: 0.93991387, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -19795,7 +19815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.03137255, g: 0.12156863, b: 0.80784315, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -19803,11 +19823,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 687dcec43b2f746efa5a1ceaf3ba0276, type: 3}
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -23140,6 +23160,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5d3c7d7d7795b9439caabdd40a81e3b, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &939949775
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4762329355151810, guid: 4281207b091d1de44b7b8838ccc29aba, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762329355151810, guid: 4281207b091d1de44b7b8838ccc29aba, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762329355151810, guid: 4281207b091d1de44b7b8838ccc29aba, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762329355151810, guid: 4281207b091d1de44b7b8838ccc29aba, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762329355151810, guid: 4281207b091d1de44b7b8838ccc29aba, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762329355151810, guid: 4281207b091d1de44b7b8838ccc29aba, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762329355151810, guid: 4281207b091d1de44b7b8838ccc29aba, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762329355151810, guid: 4281207b091d1de44b7b8838ccc29aba, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4281207b091d1de44b7b8838ccc29aba, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &941523128 stripped
 GameObject:
@@ -27519,6 +27581,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1873c13e992e1d4478d329393abc80ac, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1113896538
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4376146924681230, guid: 674a418eedd65db4ea05623177e00a22, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376146924681230, guid: 674a418eedd65db4ea05623177e00a22, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376146924681230, guid: 674a418eedd65db4ea05623177e00a22, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376146924681230, guid: 674a418eedd65db4ea05623177e00a22, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376146924681230, guid: 674a418eedd65db4ea05623177e00a22, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376146924681230, guid: 674a418eedd65db4ea05623177e00a22, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376146924681230, guid: 674a418eedd65db4ea05623177e00a22, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376146924681230, guid: 674a418eedd65db4ea05623177e00a22, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 674a418eedd65db4ea05623177e00a22, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1114337567 stripped
 GameObject:
@@ -32953,6 +33057,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4246647767983542, guid: 0d07fc0d528872747871b96eb594ffc0,
     type: 2}
   m_PrefabInternal: {fileID: 1737633883}
+--- !u!108 &1336579302 stripped
+Light:
+  m_PrefabParentObject: {fileID: 108229135368509360, guid: 4281207b091d1de44b7b8838ccc29aba,
+    type: 2}
+  m_PrefabInternal: {fileID: 939949775}
 --- !u!1001 &1336830401
 Prefab:
   m_ObjectHideFlags: 0
@@ -34316,7 +34425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.866, g: 0.020903433, b: 0.020903433, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -34324,11 +34433,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 687dcec43b2f746efa5a1ceaf3ba0276, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
